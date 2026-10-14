@@ -1,0 +1,27 @@
+# Flutter / Dart
+.dart_tool/
+.packages
+.pub-cache/
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+.metadata
+pubspec.lock
+# Generated localizations
+lib/l10n/gen/
+# Android
+android/.gradle/
+android/local.properties
+android/key.properties
+android/gradlew
+android/gradlew.bat
+android/gradle/wrapper/gradle-wrapper.jar
+*.jks
+*.keystore
+# Seller secrets
+tools/keys.json
+# IDE
+.idea/
+*.iml
+.vscode/
+.DS_Store
