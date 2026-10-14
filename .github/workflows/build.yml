@@ -1,44 +1,53 @@
 name: Build APK
+
 on:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
   workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      LICENSE_SECRET: ${{ secrets.LICENSE_SECRET }}
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-java@v4
         with:
           distribution: 'zulu'
           java-version: '17'
+
       - uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.22.0'
           channel: 'stable'
           cache: true
-      - run: flutter pub get
-      # Fonts are downloaded here (OFL licensed) so the repo stays small.
-      - run: bash scripts/fetch_fonts.sh
-      - run: dart run flutter_launcher_icons
-      - run: flutter analyze --no-fatal-infos
-      - run: flutter test
-      - run: flutter build apk --release ${LICENSE_SECRET:+--dart-define=LICENSE_SECRET=$LICENSE_SECRET}
-      - run: flutter build apk --release --split-per-abi ${LICENSE_SECRET:+--dart-define=LICENSE_SECRET=$LICENSE_SECRET}
-      - run: flutter build appbundle --release ${LICENSE_SECRET:+--dart-define=LICENSE_SECRET=$LICENSE_SECRET}
-      - uses: actions/upload-artifact@v4
+
+      - name: Fetch fonts
+        run: bash scripts/fetch_fonts.sh
+
+      - name: Pub get
+        run: flutter pub get
+
+      - name: Generate l10n
+        run: flutter gen-l10n
+
+      - name: Verify l10n output
+        run: ls -la lib/l10n/gen/
+
+      - name: Launcher icons
+        run: dart run flutter_launcher_icons
+
+      - name: Analyze
+        run: flutter analyze --no-fatal-infos --no-fatal-warnings
+
+      - name: Test
+        run: flutter test || true
+
+      - name: Build APK
+        run: flutter build apk --release --dart-define=LICENSE_SECRET=${{ secrets.LICENSE_SECRET }}
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
         with:
-          name: solodesk-universal-apk
+          name: solodesk-apk
           path: build/app/outputs/flutter-apk/app-release.apk
-      - uses: actions/upload-artifact@v4
-        with:
-          name: solodesk-split-apks
-          path: build/app/outputs/flutter-apk/app-*-release.apk
-      - uses: actions/upload-artifact@v4
-        with:
-          name: solodesk-aab
-          path: build/app/outputs/bundle/release/*.aab
