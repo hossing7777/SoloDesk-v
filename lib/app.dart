@@ -23,7 +23,7 @@ class AppRoot extends ConsumerWidget {
       theme: AppTheme.build(accent, Brightness.light),
       darkTheme: AppTheme.build(accent, Brightness.dark),
       themeMode: s.themeMode,
-      locale: LocaleService.toLocale(s.locale),
+      locale: s.locale.isEmpty ? const Locale('fa') : LocaleService.toLocale(s.locale),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       home: home,
