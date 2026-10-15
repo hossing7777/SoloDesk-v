@@ -133,5 +133,17 @@
   "next": "Suivant",
   "onboarding1": "Gardez clients et projets bien organisés.",
   "onboarding2": "Suivez votre temps, même en arrière-plan.",
-  "onboarding3": "Créez des factures PDF et soyez payé à temps."
+  "onboarding3": "Créez des factures PDF et soyez payé à temps.",
+  "paywallTitle": "SoloDesk Pro",
+  "paywallSubtitle": "Accès illimité à toutes les fonctionnalités",
+  "paywallFeature1": "Clients et factures illimités",
+  "paywallFeature2": "Tous les modèles de facture et export PDF",
+  "paywallFeature3": "Sauvegarde et restauration",
+  "buyProButton": "Acheter Pro",
+  "restorePurchase": "Restaurer l’achat",
+  "trialLimitReached": "Vous avez atteint la limite de l’offre gratuite",
+  "purchaseSuccess": "Achat réussi. Pro est activé.",
+  "purchaseFailed": "L’achat a échoué. Réessayez.",
+  "purchaseCancelled": "Achat annulé.",
+  "restoreNotFound": "Aucun achat précédent trouvé."
 }

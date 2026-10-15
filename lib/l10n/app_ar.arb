@@ -133,5 +133,17 @@
   "next": "التالي",
   "onboarding1": "نظّم جميع عملائك ومشاريعك.",
   "onboarding2": "تتبّع وقتك حتى والتطبيق في الخلفية.",
-  "onboarding3": "أنشئ فواتير PDF واحصل على مستحقاتك في موعدها."
+  "onboarding3": "أنشئ فواتير PDF واحصل على مستحقاتك في موعدها.",
+  "paywallTitle": "SoloDesk Pro",
+  "paywallSubtitle": "وصول غير محدود إلى كل الميزات",
+  "paywallFeature1": "عملاء وفواتير غير محدودة",
+  "paywallFeature2": "جميع قوالب الفواتير وتصدير PDF",
+  "paywallFeature3": "النسخ الاحتياطي والاستعادة",
+  "buyProButton": "شراء النسخة الاحترافية",
+  "restorePurchase": "استعادة الشراء",
+  "trialLimitReached": "وصلت إلى حد الخطة المجانية",
+  "purchaseSuccess": "تمت عملية الشراء بنجاح. النسخة الاحترافية مفعّلة.",
+  "purchaseFailed": "فشلت عملية الشراء. حاول مرة أخرى.",
+  "purchaseCancelled": "تم إلغاء الشراء.",
+  "restoreNotFound": "لم يتم العثور على عملية شراء سابقة."
 }

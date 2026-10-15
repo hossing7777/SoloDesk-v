@@ -8,7 +8,7 @@
   "navInvoices": "فاکتورها",
   "navMore": "بیشتر",
   "save": "ذخیره",
-  "cancel": "انصراف",
+  "cancel": "لغو",
   "delete": "حذف",
   "add": "افزودن",
   "fieldRequired": "الزامی",
@@ -133,5 +133,17 @@
   "next": "بعدی",
   "onboarding1": "همه مشتریان و پروژه‌هایتان را منظم نگه دارید.",
   "onboarding2": "زمان کار را حتی وقتی برنامه در پس‌زمینه است ثبت کنید.",
-  "onboarding3": "فاکتور PDF بسازید و به‌موقع پول بگیرید."
+  "onboarding3": "فاکتور PDF بسازید و به‌موقع پول بگیرید.",
+  "paywallTitle": "نسخه حرفه‌ای SoloDesk",
+  "paywallSubtitle": "دسترسی نامحدود به همه امکانات",
+  "paywallFeature1": "مشتریان و فاکتورهای نامحدود",
+  "paywallFeature2": "همه قالب‌های فاکتور و خروجی PDF",
+  "paywallFeature3": "پشتیبان‌گیری و بازیابی",
+  "buyProButton": "خرید نسخه حرفه‌ای",
+  "restorePurchase": "بازیابی خرید",
+  "trialLimitReached": "به محدودیت نسخه رایگان رسیدید",
+  "purchaseSuccess": "خرید با موفقیت انجام شد. نسخه حرفه‌ای فعال است.",
+  "purchaseFailed": "خرید ناموفق بود. لطفاً دوباره تلاش کنید.",
+  "purchaseCancelled": "خرید لغو شد.",
+  "restoreNotFound": "خرید قبلی پیدا نشد."
 }

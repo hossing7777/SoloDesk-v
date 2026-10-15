@@ -133,5 +133,17 @@
   "next": "下一步",
   "onboarding1": "轻松管理所有客户和项目。",
   "onboarding2": "即使应用在后台也能记录工时。",
-  "onboarding3": "生成 PDF 发票，按时收款。"
+  "onboarding3": "生成 PDF 发票，按时收款。",
+  "paywallTitle": "SoloDesk Pro",
+  "paywallSubtitle": "无限使用全部功能",
+  "paywallFeature1": "客户和发票无限制",
+  "paywallFeature2": "全部发票模板及 PDF 导出",
+  "paywallFeature3": "备份与恢复",
+  "buyProButton": "购买专业版",
+  "restorePurchase": "恢复购买",
+  "trialLimitReached": "已达到免费版上限",
+  "purchaseSuccess": "购买成功，专业版已激活。",
+  "purchaseFailed": "购买失败，请重试。",
+  "purchaseCancelled": "购买已取消。",
+  "restoreNotFound": "未找到之前的购买记录。"
 }

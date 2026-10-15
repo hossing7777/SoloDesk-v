@@ -133,5 +133,17 @@
   "next": "Weiter",
   "onboarding1": "Behalte alle Kunden und Projekte im Griff.",
   "onboarding2": "Erfasse Zeit, auch wenn die App im Hintergrund läuft.",
-  "onboarding3": "Erstelle PDF-Rechnungen und werde pünktlich bezahlt."
+  "onboarding3": "Erstelle PDF-Rechnungen und werde pünktlich bezahlt.",
+  "paywallTitle": "SoloDesk Pro",
+  "paywallSubtitle": "Unbegrenzter Zugriff auf alle Funktionen",
+  "paywallFeature1": "Unbegrenzte Kunden und Rechnungen",
+  "paywallFeature2": "Alle Rechnungsvorlagen und PDF-Export",
+  "paywallFeature3": "Backup und Wiederherstellung",
+  "buyProButton": "Pro kaufen",
+  "restorePurchase": "Kauf wiederherstellen",
+  "trialLimitReached": "Du hast das Limit des kostenlosen Tarifs erreicht",
+  "purchaseSuccess": "Kauf erfolgreich. Pro ist aktiviert.",
+  "purchaseFailed": "Kauf fehlgeschlagen. Bitte erneut versuchen.",
+  "purchaseCancelled": "Kauf abgebrochen.",
+  "restoreNotFound": "Kein früherer Kauf gefunden."
 }

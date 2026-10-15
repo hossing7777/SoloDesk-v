@@ -198,7 +198,10 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
               contentPadding: EdgeInsets.zero,
               leading: const Icon(Icons.backup_outlined),
               title: Text(l.backup),
-              onTap: () => BackupService.shareBackup(ref.read(dbProvider)),
+              onTap: () async {
+                if (!await ensurePro(context, ref)) return;
+                await BackupService.shareBackup(ref.read(dbProvider));
+              },
             ),
           ],
           const Divider(height: 32),

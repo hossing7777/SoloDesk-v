@@ -133,5 +133,17 @@
   "next": "आगे",
   "onboarding1": "अपने सभी क्लाइंट और प्रोजेक्ट व्यवस्थित रखें।",
   "onboarding2": "ऐप बैकग्राउंड में हो तब भी समय ट्रैक करें।",
-  "onboarding3": "PDF इनवॉइस बनाएं और समय पर भुगतान पाएं।"
+  "onboarding3": "PDF इनवॉइस बनाएं और समय पर भुगतान पाएं।",
+  "paywallTitle": "SoloDesk Pro",
+  "paywallSubtitle": "सभी सुविधाओं तक असीमित पहुंच",
+  "paywallFeature1": "असीमित क्लाइंट और इनवॉइस",
+  "paywallFeature2": "सभी इनवॉइस टेम्पलेट और PDF निर्यात",
+  "paywallFeature3": "बैकअप और रिस्टोर",
+  "buyProButton": "प्रो खरीदें",
+  "restorePurchase": "खरीदारी रिस्टोर करें",
+  "trialLimitReached": "आप मुफ़्त प्लान की सीमा तक पहुंच गए हैं",
+  "purchaseSuccess": "खरीदारी सफल रही। प्रो सक्रिय है।",
+  "purchaseFailed": "खरीदारी विफल रही। कृपया फिर प्रयास करें।",
+  "purchaseCancelled": "खरीदारी रद्द की गई।",
+  "restoreNotFound": "कोई पिछली खरीदारी नहीं मिली।"
 }

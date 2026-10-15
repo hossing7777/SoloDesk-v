@@ -133,5 +133,17 @@
   "next": "Next",
   "onboarding1": "Keep all your clients and projects organized.",
   "onboarding2": "Track your time, even with the app in the background.",
-  "onboarding3": "Create PDF invoices and get paid on time."
+  "onboarding3": "Create PDF invoices and get paid on time.",
+  "paywallTitle": "SoloDesk Pro",
+  "paywallSubtitle": "Unlimited access to every feature",
+  "paywallFeature1": "Unlimited clients and invoices",
+  "paywallFeature2": "All invoice templates and PDF export",
+  "paywallFeature3": "Backup and restore",
+  "buyProButton": "Buy Pro",
+  "restorePurchase": "Restore purchase",
+  "trialLimitReached": "You’ve reached the free plan limit",
+  "purchaseSuccess": "Purchase successful. Pro is now active.",
+  "purchaseFailed": "Purchase failed. Please try again.",
+  "purchaseCancelled": "Purchase cancelled.",
+  "restoreNotFound": "No previous purchase was found."
 }

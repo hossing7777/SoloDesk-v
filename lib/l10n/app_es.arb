@@ -133,5 +133,17 @@
   "next": "Siguiente",
   "onboarding1": "Mantén organizados todos tus clientes y proyectos.",
   "onboarding2": "Registra tu tiempo, incluso con la app en segundo plano.",
-  "onboarding3": "Crea facturas en PDF y cobra a tiempo."
+  "onboarding3": "Crea facturas en PDF y cobra a tiempo.",
+  "paywallTitle": "SoloDesk Pro",
+  "paywallSubtitle": "Acceso ilimitado a todas las funciones",
+  "paywallFeature1": "Clientes y facturas ilimitados",
+  "paywallFeature2": "Todas las plantillas y exportación a PDF",
+  "paywallFeature3": "Copia de seguridad y restauración",
+  "buyProButton": "Comprar Pro",
+  "restorePurchase": "Restaurar compra",
+  "trialLimitReached": "Has alcanzado el límite del plan gratuito",
+  "purchaseSuccess": "Compra realizada. Pro está activado.",
+  "purchaseFailed": "La compra falló. Inténtalo de nuevo.",
+  "purchaseCancelled": "Compra cancelada.",
+  "restoreNotFound": "No se encontró ninguna compra anterior."
 }
