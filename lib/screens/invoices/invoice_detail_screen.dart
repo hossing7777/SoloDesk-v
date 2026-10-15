@@ -87,6 +87,8 @@ class _InvoiceDetailScreenState extends ConsumerState<InvoiceDetailScreen> {
   }
 
   Future<void> _share() async {
+    if (!await ensurePro(context, ref)) return;
+    if (!mounted) return;
     final bytes = await _pdf();
     final dir = await getTemporaryDirectory();
     final file = File('${dir.path}/${_inv.number}.pdf');
@@ -95,6 +97,8 @@ class _InvoiceDetailScreenState extends ConsumerState<InvoiceDetailScreen> {
   }
 
   Future<void> _print() async {
+    if (!await ensurePro(context, ref)) return;
+    if (!mounted) return;
     final bytes = await _pdf();
     await Printing.layoutPdf(onLayout: (_) async => bytes, name: _inv.number);
   }
