@@ -7,7 +7,7 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 /// RSA public key from the Cafe Bazaar developer panel
 /// (برنامه‌ها → your app → پرداخت درون‌برنامه‌ای → کلید RSA). It is a PUBLIC key,
 /// so it is safe to commit. Until you replace it, purchases are disabled.
-const String kBazaarRsaKey = 'REPLACE_WITH_YOUR_BAZAAR_RSA_PUBLIC_KEY';
+const String kBazaarRsaKey = 'MIHNMA0GCSqGSIb3DQEBAQUAA4G7ADCBtwKBrwCt2ARzSDtfl9/SmLRBDyduQs0Fg8GIlF/4V1m+R3N0ODyhZlKyqjkwAd5vRHhGUZcG7eA8Lx4j5KEZh/9kVU7vQzMJUNygYbHGxdto7FiZ7X3Bg/s8PhYycxSk+vACG87TP+mMTtQvA1KC6gnE/3vPa9lyqTBjJP8xsDurdt13wpN9di/6e1KaD70qKlmpVdUhqw2gg/hh7Lla3JMfiNwWGdhX5Fi9XHR4hyGkB4MCAwEAAQ==';
 
 /// Cafe Bazaar in-app billing (Poolakey) for the one-time "Pro" product.
 ///
