@@ -16,7 +16,7 @@ import 'package:solodesk/utils/constants.dart';
 import 'package:solodesk/utils/ext.dart';
 import 'package:solodesk/utils/nav.dart';
 import 'package:solodesk/widgets/dialogs.dart';
-
+import 'package:solodesk/utils/limits.dart';
 class SettingsScreen extends ConsumerStatefulWidget {
   const SettingsScreen({super.key});
 
