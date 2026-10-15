@@ -2,6 +2,7 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+        maven { url "https://jitpack.io" }
     }
 }
 
@@ -9,6 +10,18 @@ rootProject.buildDir = "../build"
 subprojects {
     project.buildDir = "${rootProject.buildDir}/${project.name}"
 }
+
+subprojects {
+    afterEvaluate { project ->
+        if (project.hasProperty("android") && project.android.hasProperty("namespace")
+                && project.android.namespace == null) {
+            def manifest = project.file("src/main/AndroidManifest.xml")
+            def pkg = manifest.exists() ? new groovy.xml.XmlSlurper().parse(manifest).@package.text() : ""
+            project.android.namespace = pkg ? pkg : project.group.toString()
+        }
+    }
+}
+
 subprojects {
     project.evaluationDependsOn(":app")
 }

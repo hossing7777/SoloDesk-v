@@ -10,6 +10,8 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="com.farsitel.bazaar.permission.PAY_THROUGH_BAZAAR" />
+
 
     <application
         android:label="SoloDesk"
@@ -54,6 +56,7 @@
     </application>
 
     <queries>
+        <package android:name="com.farsitel.bazaar" />
         <intent>
             <action android:name="android.intent.action.VIEW" />
             <data android:scheme="https" />
