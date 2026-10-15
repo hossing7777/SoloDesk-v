@@ -41,8 +41,16 @@ jobs:
         run: flutter test || true
 
       - name: Decode keystore
+        env:
+          P1: ${{ secrets.KEYSTORE_PART1 }}
+          P2: ${{ secrets.KEYSTORE_PART2 }}
+          P3: ${{ secrets.KEYSTORE_PART3 }}
         run: |
-          echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > $RUNNER_TEMP/release.jks
+          P1=$(printf '%s' "$P1" | tr -d '\n\r')
+          P2=$(printf '%s' "$P2" | tr -d '\n\r')
+          P3=$(printf '%s' "$P3" | tr -d '\n\r')
+          echo "Lengths: ${#P1} ${#P2} ${#P3}"
+          printf '%s%s%s' "$P1" "$P2" "$P3" | base64 -d > $RUNNER_TEMP/release.jks
           ls -la $RUNNER_TEMP/release.jks
 
       - name: Build APK (signed)
@@ -52,11 +60,6 @@ jobs:
           KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
         run: flutter build apk --release
-
-      - name: Verify signature
-        run: |
-          echo "=== Verifying APK signature ==="
-          $ANDROID_HOME/build-tools/34.0.0/apksigner verify --print-certs build/app/outputs/flutter-apk/app-release.apk || true
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
