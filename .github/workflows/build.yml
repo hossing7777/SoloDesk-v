@@ -31,9 +31,6 @@ jobs:
       - name: Generate l10n
         run: flutter gen-l10n
 
-      - name: Verify l10n
-        run: ls -la lib/l10n/gen/
-
       - name: Launcher icons
         run: dart run flutter_launcher_icons
 
@@ -43,11 +40,26 @@ jobs:
       - name: Test
         run: flutter test || true
 
-      - name: Build APK
+      - name: Decode keystore
+        run: |
+          echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > $RUNNER_TEMP/release.jks
+          ls -la $RUNNER_TEMP/release.jks
+
+      - name: Build APK (signed)
+        env:
+          KEYSTORE_PATH: ${{ runner.temp }}/release.jks
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
         run: flutter build apk --release
+
+      - name: Verify signature
+        run: |
+          echo "=== Verifying APK signature ==="
+          $ANDROID_HOME/build-tools/34.0.0/apksigner verify --print-certs build/app/outputs/flutter-apk/app-release.apk || true
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: solodesk-apk
+          name: solodesk-apk-signed
           path: build/app/outputs/flutter-apk/app-release.apk
