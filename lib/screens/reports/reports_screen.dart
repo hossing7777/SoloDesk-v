@@ -7,6 +7,7 @@ import 'package:solodesk/providers/data_providers.dart';
 import 'package:solodesk/services/backup_service.dart';
 import 'package:solodesk/utils/ext.dart';
 import 'package:solodesk/utils/format.dart';
+import 'package:solodesk/utils/limits.dart';
 
 class ReportsScreen extends ConsumerWidget {
   const ReportsScreen({super.key});
@@ -110,11 +111,14 @@ class ReportsScreen extends ConsumerWidget {
           OutlinedButton.icon(
             icon: const Icon(Icons.table_chart_outlined),
             label: Text(l.exportCsv),
-            onPressed: () => BackupService.shareInvoicesCsv(
-              invoices,
-              {for (final c in clients) c.id: c.name},
-              cur,
-            ),
+            onPressed: () async {
+              if (!await ensurePro(context, ref)) return;
+              await BackupService.shareInvoicesCsv(
+                invoices,
+                {for (final c in clients) c.id: c.name},
+                cur,
+              );
+            },
           ),
         ],
       ),
